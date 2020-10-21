@@ -12,12 +12,32 @@ const domElements = (() => {
   const email = document.getElementById('email');
   const emailError = document.querySelector(`#${email.id} + span.error`);
 
+  // passwords
+  const pwd = document.getElementById('pwd');
+  const pwd2 = document.getElementById('pwd2');
+
+  // pwd error span
+  const pwdError = document.querySelector(`#${pwd.id} + span.error`);
+  const pwdError2 = document.querySelector(`#${pwd2.id} + span.error`);
+
   // inputs
   const inputs = Array.from(document.querySelectorAll('input:not(#submit)'));
 
   // errors
   const errors = Array.from(document.querySelectorAll('span'));
-  return { form, name, email, nameError, emailError, inputs, errors };
+  return {
+    form,
+    name,
+    email,
+    pwd,
+    pwd2,
+    nameError,
+    emailError,
+    pwdError,
+    pwdError2,
+    inputs,
+    errors,
+  };
 })();
 
 export { domElements as default };

@@ -1,4 +1,4 @@
 import './styles.css';
-import { checkForm } from "./form"
+import { checkForm } from './form';
 
 checkForm();

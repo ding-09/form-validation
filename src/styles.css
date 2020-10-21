@@ -62,7 +62,7 @@ input {
   font-size: 13px;
   padding: 3px;
   max-width: 220px;
-  height: 20px;
+  height: auto;
 }
 
 .error.active {

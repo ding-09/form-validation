@@ -2,19 +2,29 @@
 import domElements from './references';
 import { checkName } from './check_name';
 import { checkEmail } from './check_email';
+import { checkPassword } from './check_pwd';
+import { confirmPassword } from './confirm_pwd';
 
 const { form } = domElements;
-const { name, email } = domElements;
+const { name, email, pwd, pwd2 } = domElements;
 
 const checkForm = () => {
   checkName();
   checkEmail();
+  checkPassword();
+  confirmPassword();
 
   form.addEventListener('submit', (e) => {
-    if (name.validity.valid && email.validity.valid) {
-        alert("Successful submission");
+    if (
+      name.validity.valid &&
+      email.validity.valid &&
+      pwd.validity.valid &&
+      pwd2.validity.valid
+    ) {
+      alert('Good job!');
     } else {
-        e.preventDefault();
+      alert('NO!');
+      e.preventDefault();
     }
   });
 };
