@@ -10,8 +10,8 @@ body {
 }
 
 #main-container {
-  max-width: 50%;
-  margin: 20px auto;
+  max-width: 40%;
+  margin: 80px auto;
   height: auto;
   background-color: white;
   border-radius: 5px;
@@ -21,13 +21,14 @@ body {
 header {
   text-align: center;
   font-size: 25px;
-  padding-top: 15px;
+  padding-top: 25px;
   color: #e24657;
+  letter-spacing: 1px;
 }
 
 #form {
   display: flex;
-  width: 50%;
+  width: 80%;
   flex-direction: column;
   align-items: center;
   margin: 20px auto;
@@ -36,23 +37,25 @@ header {
 
 #form > div {
   margin-bottom: 5px;
+  width: auto;
 }
 
 label {
   font-size: 18px;
   font-weight: 500;
-  color: #3745B9;
+  color: #3745b9;
 }
 
 input {
   display: block;
-  width: 250px;
   height: 35px;
+  width: 250px;
   margin: 7px 0;
   padding: 8px;
   border: 1px solid #edeef6;
   border-radius: 5px;
   background-color: #edeef6;
+  outline: none;
 }
 
 .error {
@@ -63,13 +66,33 @@ input {
 }
 
 .error.active {
-    color: red;
+  color: red;
 }
 
 ::placeholder {
   font-size: 15px;
 }
 
-input:focus {
-    outline: none;
+input:focus:invalid {
+  outline: none;
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+#submit {
+  color: white;
+  background-color: #f91432;
+  font-size: 20px;
+  height: 50px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  max-width: 150px;
+  letter-spacing: 1px;
+}
+
+#submit:hover {
+  background-color: #fa2d48;
 }

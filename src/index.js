@@ -1,7 +1,5 @@
 import './styles.css';
+import { checkName } from './check_name';
 
-function elote() {
-  console.log('hello world');
-}
 
-elote();
+checkName();
