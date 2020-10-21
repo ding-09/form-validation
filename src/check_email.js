@@ -3,9 +3,7 @@ import domElements from './references';
 const { email } = domElements;
 const { emailError } = domElements;
 
-
 const checkEmail = () => {
-
   const displayErrorMsg = () => {
     if (email.validity.valueMissing) {
       emailError.textContent = 'Please enter your e-mail';

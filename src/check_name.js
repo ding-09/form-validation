@@ -10,7 +10,7 @@ const checkName = () => {
     } else if (name.validity.tooLong) {
       nameError.textContent = 'Please do not exceed 25 characters';
     }
-    nameError.className = "error active";
+    nameError.className = 'error active';
   };
 
   name.addEventListener('input', () => {
